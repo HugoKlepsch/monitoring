@@ -4,16 +4,27 @@
 
 # Purpose
 
-Monitoring my home server.
+Monitoring stack for my home server.
 
 # High Level Design
 
-TODO
+* Applications are containerized and deployed using Docker Compose.
+* Bind mounts are used to persist data, not docker volumes.
 
 # Technologies
 
-* Node exporter
-* Prometheus
-* Grafana
+* [Node exporter](https://github.com/prometheus/node_exporter)
+* [Prometheus](https://prometheus.io/)
+* [Grafana](https://grafana.com/)
 
-TODO...
+# Setup
+
+1. Copy environment template and set secrets
+   - `cp template.env.bash .env.bash`
+   - Edit `.env.bash` and set appropriate values.
+2. Start the stack
+   - `source .env.bash`
+   - `docker compose -f compose/docker-compose.yml up -d`
+
+Note: The `.env.bash` file is git-ignored and used by docker-compose to inject secrets.
+ 

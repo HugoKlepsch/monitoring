@@ -1,7 +1,4 @@
 /.idea/
 /generated_config/
 /.env.bash
-/config/
 /data/
-/grafana_data/
-/prometheus_data/
