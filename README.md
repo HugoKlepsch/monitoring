@@ -14,6 +14,7 @@ Monitoring stack for my home server.
 # Technologies
 
 * [Node exporter](https://github.com/prometheus/node_exporter)
+* [cAdvisor](https://github.com/google/cadvisor)
 * [Prometheus](https://prometheus.io/)
 * [Grafana](https://grafana.com/)
 
