@@ -3,6 +3,8 @@ version: "3.9"
 networks:
   monitoring:
 
+name: monitoring
+
 services:
   prometheus:
     image: prom/prometheus:latest
