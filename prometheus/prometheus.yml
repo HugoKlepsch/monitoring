@@ -5,12 +5,16 @@ global:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: ['prometheus:9090']
+      - targets: ['127.0.0.1:9090']  # TODO: don't use host network
 
   - job_name: 'node-exporter'
     static_configs:
-      - targets: ['node-exporter:9100']
+      - targets: ['127.0.0.1:9100']
 
   - job_name: 'cadvisor'
     static_configs:
-      - targets: ['cadvisor:8080']
+      - targets: ['127.0.0.1:8080']
+
+  - job_name: 'personal website'
+    static_configs:
+      - targets: ['127.0.0.1:9089']
